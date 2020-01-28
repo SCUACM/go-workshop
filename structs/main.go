@@ -11,6 +11,10 @@ type Pizza struct {
 	Toppings []*Topping
 }
 
+func (p *Pizza) eat() {
+	fmt.Println("nom nom nom")
+}
+
 func main() {
 	pizza := &Pizza{
 		Diameter: 12,
@@ -20,5 +24,12 @@ func main() {
 	pizza.Toppings = append(pizza.Toppings, &Topping{"Pineapple"})
 
 	fmt.Println(pizza)
+	fmt.Println(*pizza)
+
 	fmt.Println(pizza.Toppings[0])
+	fmt.Println(*pizza.Toppings[0])
+
+	fmt.Println(pizza.Toppings[0].Name)
+
+	pizza.eat()
 }
