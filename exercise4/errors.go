@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+const team = "Green Team"
+
 func getValue(scores map[string]int, key string) (int, error) {
 	var value int
 	var ok bool
@@ -15,7 +17,6 @@ func getValue(scores map[string]int, key string) (int, error) {
 
 func main() {
 	scores := make(map[string]int)
-	team := "Green Team"
 
 	value, err := getValue(scores, team)
 	if err != nil {
